@@ -1,0 +1,175 @@
+.header{
+    background: #4ABDAC;
+    color: #fff;
+    margin: 1px;
+}
+
+
+hr{
+    border-top: 3px double #2a3132;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #90afc5;
+}
+
+li{
+    float: left;
+    border: 2px solid #336b87;
+    padding: 3px;
+    margin: 3px;
+}
+
+li>a, li>input{
+    display: block;
+    color: #2a3132;
+    text-decoration: none;
+    padding: 10px 14px;
+}
+
+#color{
+    margin-left: 150px;
+}
+
+#rect{
+    margin-left: 100px;
+}
+
+
+
+li>a:hover{
+    color: #763626;
+    cursor: pointer;
+}
+
+#canvas{
+    background: #66a5ad;
+    position: relative;
+    height: 1200px;
+    width: 100%;
+}
+
+.corners{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background:#fff;
+    border: 1px solid black;
+    display: none;
+}
+.selected .corners{
+    display: inline-block;
+}
+.cornerUpLeft{
+    top: -5px;
+    left: -5px;
+    cursor:nw-resize;
+}
+
+.cornerUpRight{
+    top: -5px;
+    right: -5px;
+    cursor:ne-resize;
+}
+
+.cornerBtmLeft{
+    bottom: -5px;
+    left: -5px;
+    cursor:sw-resize;
+}
+.cornerBtmRight{
+    bottom: -5px;
+    right: -5px;
+    cursor:se-resize;
+}
+
+.rectangle{
+    position: absolute;
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+}
+
+
+li>div.colorPicker{
+    display: none;
+}
+
+
+
+.colorBox{
+    border: 1px solid black;
+    height: 20px;
+    width: 20px;
+    list-style: none;
+}
+
+
+/* The Modal (background) */
+		.modal {
+			display: none; /* Hidden by default */
+			position: fixed; /* Stay in place */
+			z-index: 1; /* Sit on top */
+			padding-top: 100px; /* Location of the box */
+			left: 0;
+			top: 0;
+			width: 100%; /* Full width */
+			height: 100%; /* Full height */
+			overflow: auto; /* Enable scroll if needed */
+			background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		}
+
+		/* Modal Content */
+		.modal-content {
+			position: relative;
+			background-color: #fefefe;
+			margin: auto;
+			padding: 0;
+			border: 1px solid #888;
+			width: 80%;
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+			-webkit-animation-name: animatetop;
+			-webkit-animation-duration: 0.4s;
+			animation-name: animatetop;
+			animation-duration: 0.4s
+		}
+
+		/* Add Animation */
+		@-webkit-keyframes animatetop {
+			from {top:-300px; opacity:0} 
+			to {top:0; opacity:1}
+		}
+
+		@keyframes animatetop {
+			from {top:-300px; opacity:0}
+			to {top:0; opacity:1}
+		}
+
+		/* The Close Button */
+		.close {
+			color: white;
+			float: right;
+			font-size: 28px;
+			font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+			color: #000;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+		.modal-header {
+			padding: 2px 16px;
+			background-color: #5cb85c;
+			color: white;
+		}
+
+		.modal-body {padding: 2px 16px;}
+
+
+

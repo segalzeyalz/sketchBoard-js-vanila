@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sketch Board - Eyal Segal Project</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <h1 class="header" id="header">Sketch Board</h1>
+        <div>
+            <ul class="toolbar">
+                <li id="LoadBtn"><a>Load</a></li>
+                <li id="SaveBtn"><a>Save</a></li>
+                <li id="rectBtn"><a>Rectangle</a></li>
+                <li id="ovalBtn"><a>Oval</a></li>
+                <li><input id="colorBtn" type="color" name="color" id="color"></li>
+                <li id="deleteBtn"><a>Delete</a></li>
+            </ul>
+            <hr>
+        </div>
+      
+        <div class="canvas" id="canvas">
+            
+        </div>
+		
+		<!-- The Save Modal -->
+		<div id="saveModal" class="modal">
+
+		  <!-- Modal content -->
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <span class="close" id="closeSave" onclick="closeWindow()" onkeydown="closeWindowByEsc()">&times;</span>
+			  <p>Save</p>
+			</div>
+			<div class="modal-body">
+			  <p>Please give a save name:<input type="text" id="saveName"/><button onclick="saveData()">Save</button></p>
+			</div>
+		  </div>
+
+		</div>
+		
+		<!-- The Load Modal -->
+		<div id="loadModal" class="modal">
+
+		  <!-- Modal content -->
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <span class="close" id="closeLoad"  onclick="closeWindow()">&times;</span>
+			  <p>Load</p>
+			</div>
+			<div class="modal-body">
+			  <p>Please select a saved drawing:<select id="loadName"></select><button id="loadWinData">Load</button></p>
+			</div>
+		  </div>
+
+		</div>
+		
+	
+    </body>
+        <script src="js/shapes.js"></script>
+        <script src="js/drag.js"></script>
+        <script src="js/save.js"></script>
+        <script src="js/actToolbar.js"></script>
+        <script src="js/resize.js"></script>
+        
+</html>
