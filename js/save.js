@@ -1,6 +1,3 @@
-
-
-
 var loadWinData = document.getElementById("loadWinData");
     loadWinData.addEventListener("click", restoreData);
 
@@ -71,7 +68,6 @@ function restoreData(){
 		}
 
 
-
 		// When the user clicks anywhere outside of the modal, close it
 		window.onclick = function(event) {
 			if (event.target == saveModal || event.target == loadModal) {
@@ -85,6 +81,14 @@ function restoreData(){
 			saveModal.style.display = "none";
 			loadModal.style.display = "none";
 		}
+
+		document.getElementById("closeSave").addEventListener("click", function(){
+			closeWindow();
+	});
+
+	document.getElementById("closeSave").addEventListener("keydown", function(){
+		closeWindowByEsc()
+});
 
     var closeWindowByEsc = function(){
     if (!e) e = window.event;
