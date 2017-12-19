@@ -68,6 +68,4 @@ function mouseMoveResize(e) {
    rect.style.height = height + 'px';
     rect.style.top = topVal + 'px';
 	 rect.style.left = leftVal + 'px';
-   
 }
-

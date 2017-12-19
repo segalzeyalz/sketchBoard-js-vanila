@@ -56,10 +56,7 @@ var selectEventHandler = function(event) {
 
             }
         }
-
         this.classList.toggle("selected");
-  //      rectDOM.addEventListener("onmousedown", startDrag);
-    //    rectDOM.addEventListener("onmouseup", stopDrag);
     }
 
 
@@ -134,4 +131,3 @@ function removeCorners(rectDom) {
     }
 
 }
-
