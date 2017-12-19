@@ -7,18 +7,17 @@ var	rect = {},
 
 function mouseDownResize(e) {
 rect = e.target.parentElement;
- if(rect == null || rect.className != "drag selected")
+ if(rect === null || rect.className !== "drag selected")
 		return;
 
   // 4 cases:
   // 1. top left
-  if(e.target.className == "corners cornerUpLeft" ){
+  if(e.target.className === "corners cornerUpLeft" ){
     dragTL = true;
   }
   // 2. top right
-  else if( e.target.className == "corners cornerUpRight" ){
+  else if( e.target.className === "corners cornerUpRight" ){
     dragTR = true;
-
   }
   // 3. bottom left
   else if( e.target.className == "corners cornerBtmLeft"){
@@ -26,11 +25,10 @@ rect = e.target.parentElement;
 
   }
   // 4. bottom right
-  else if( e.target.className == "corners cornerBtmRight" ){
+  else if( e.target.className === "corners cornerBtmRight" ){
     dragBR = true;
 
-  }
-  else {
+  } else {
 	return;
   }
   mouseX = e.clientX;
