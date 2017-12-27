@@ -38,7 +38,7 @@ function OnMouseDown(e)
 }
 function OnMouseMove(e)
 {
-    if (e == null) 
+    if (e === null) 
         var e = window.event; 
     // this is the actual "drag code"
     dragElement.style.left = (offsetX + e.clientX - startX) + 'px';
