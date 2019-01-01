@@ -58,8 +58,6 @@ var selectEventHandler = function(event) {
         }
         this.classList.toggle("selected");
     }
-
-
 function createCorners(rectDOM) {
     cornerUpLeft = document.createElement("div");
     cornerUpRight = document.createElement("div");
