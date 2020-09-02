@@ -5,6 +5,7 @@ var offsetY = 0;
 var dragElement;           // needs to be passed from OnMouseDown to OnMouseMove
 var oldZIndex = 0;         // we temporarily increase the z-index during drag
 
+
 InitDragDrop();
 
 function InitDragDrop()
@@ -20,15 +21,15 @@ function OnMouseDown(e)
         // grab the mouse position
         startX = e.clientX;
         startY = e.clientY;
-        
+
         // grab the clicked element's position
         offsetX = parseInt(target.style.left);
         offsetY = parseInt(target.style.top);
-        
+
         // bring the clicked element to the front while it is being dragged
         oldZIndex = target.style.zIndex;
         target.style.zIndex = 10000;
-        
+
         // we need to access the element in OnMouseMove
         dragElement = target;
 
@@ -38,8 +39,8 @@ function OnMouseDown(e)
 }
 function OnMouseMove(e)
 {
-    if (e === null) 
-        var e = window.event; 
+    if (e === null)
+        var e = window.event;
     // this is the actual "drag code"
     dragElement.style.left = (offsetX + e.clientX - startX) + 'px';
     dragElement.style.top = (offsetY + e.clientY - startY) + 'px';
@@ -51,7 +52,7 @@ function OnMouseUp(e)
     if (dragElement != null)
     {
         dragElement.style.zIndex = oldZIndex;
-        document.onmousemove = null;  
+        document.onmousemove = null;
         dragElement = null;
     }
 }
